@@ -142,7 +142,7 @@ const PostsEditForm = ({ params }: PostsEditFormProps) => {
               </FormItem>
             )}
           />
-          <Button className='w-full dark:bg-slate-800 dark:text-white'>
+          <Button className='w-full dark:bg-slate-800 dark:text-white '>
             Update Post
           </Button>
         </form>
