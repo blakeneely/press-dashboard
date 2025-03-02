@@ -15,6 +15,7 @@ import BackButton from '@/components/BackButton'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
+import { toast } from 'sonner'
 import posts from '@/data/posts'
 
 interface PostsEditFormProps {
@@ -52,7 +53,9 @@ const PostsEditForm = ({ params }: PostsEditFormProps) => {
   })
 
   const handleSubmit = (data: z.infer<typeof formSchema>) => {
-    console.log({ data })
+    toast.message('Post has been updated successfully', {
+      description: `Updated by ${post?.author} on ${post?.date}`,
+    })
   }
 
   return (
